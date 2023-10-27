@@ -11,6 +11,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     align-items: center;
     text-align: center;
     justify-content: center;
+    padding-top: 25px;
   }
   
   .line {
@@ -90,4 +91,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   .custom-tab-group {
     border-bottom: none; 
+  }
+
+  .imagenTexto{
+
+   position: relative;
+   display: inline-block;
+   text-align: center;
+    
+  }
+
+  .texto{
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    right: 5px;
+    font-size: 105px;
+    text-shadow: black 3px 3px 5px;;
+    transform: translate(-50% - 50%);
+
   }
