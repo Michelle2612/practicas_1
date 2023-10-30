@@ -8,7 +8,8 @@ import { MatTabGroupComponent } from './mat-tab-group/mat-tab-group/mat-tab-grou
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { IoComponent } from './mat-tab-group/io/io.component'; 
+import { IoComponent } from './mat-tab-group/io/io.component';
+import { CardsComponent } from './mat-tab-group/cards/cards.component'; 
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { IoComponent } from './mat-tab-group/io/io.component';
     PrincipalComponent,
     MatTabGroupComponent,
     IoComponent,
+    CardsComponent,
    
  
 

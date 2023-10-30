@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges} from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, Output} from '@angular/core';
 import { Datos } from 'src/app/datos/datosinfo.component';
 import { Router } from '@angular/router';
 
@@ -9,12 +9,9 @@ import { Router } from '@angular/router';
 })
 export class IoComponent  implements OnInit{
   
- @Input() datoI?:Datos;
+ @Input('dato') datoI?:Datos;
  constructor(private router: Router) {
-  const navigation = this.router.getCurrentNavigation();
-  if (navigation && navigation.extras.state) {
-    this.datoI = navigation.extras.state['dato'];
-  }
+
 }
 
   ngOnInit(): void {

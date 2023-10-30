@@ -78,6 +78,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .estiloCards{
     text-align: center;
     color: orangered;
+    
    
   }
   .margenCard1{
@@ -111,4 +112,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     text-shadow: black 3px 3px 5px;;
     transform: translate(-50% - 50%);
 
+  }
+
+  .orange-border {
+    border: 3px solid orange;
   }

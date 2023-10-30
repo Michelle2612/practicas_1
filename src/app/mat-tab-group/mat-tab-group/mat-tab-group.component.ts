@@ -12,33 +12,37 @@ import { Router } from '@angular/router';
 })
 export class MatTabGroupComponent  implements OnInit{
   
- listaDeDatos: Datos[]=listaDatos;
+  listaDeDatos: Datos[]=listaDatos;
+  tarjetaSalida = new EventEmitter<Datos>();
 
- constructor(private router: Router) {}
+ 
+   ngOnInit(): void {
+     console.log('se ejecuto')
+     console.log(this.listaDeDatos);
+     console.log('salida')
+     console.log(this.tarjetaSalida);
+ 
+     
+   }
 
-  ngOnInit(): void {
-    console.log('se ejecuto')
-    console.log(this.listaDeDatos);
-  }
-
-infoElegido:Datos | null = null;
-escogerDato(dat: Datos):void{
-console.log(dat)
-  this.infoElegido = dat;
-  console.log('dato escogido:', this.infoElegido)
-
-}
-
-getClassDatos(id:number): string{
-  
-  if(this.infoElegido?.id == id){
-    return 'bg-light grey  text-orangered';
-
-  }else{
-    return '';
-  }
-}
-  
-}
+ /*infoElegido:Datos | null = null;
+ escogerDato(dat: Datos):void{
+ console.log(dat)
+   this.infoElegido = dat;
+   console.log('dato escogido:', this.infoElegido)
+ 
+ }
+ 
+ getClassDatos(id:number): string{
+   
+   if(this.infoElegido?.id == id){
+     return 'bg-light grey  text-orangered';
+ 
+   }else{
+     return '';
+   }
+ }*/
+   
+ }
 
 
