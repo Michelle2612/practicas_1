@@ -16,18 +16,10 @@
     </div>
   </mat-tab>
   <mat-tab label="Build"> 
-    <!-- ol para enumerar la lista  -->
-  <ol>
-     <!-- recorre la lista del array de texto -->
-    <li *ngFor="let lista of  listaDeTexto ">
-       <!-- se pasa la lista -->
-    {{lista}}
-    </li>
-  </ol>
    <!-- en el componente build se pasa el @input  en la lista de texto del componente mattabgroup -->
    <!-- se llama el evento  -->
   <app-build
-  [m]="listaDeTexto " 
+  [mensaje]="listaDeTexto " 
   (enviarlistado)="nuevaLista($event)"
   ></app-build>
   </mat-tab>

@@ -6,6 +6,10 @@ export interface Datos{
     numero: number,
     texto: string,
   
-
 }
-
+export interface Lista{
+   
+    nombre:  string;
+  
+  
+}

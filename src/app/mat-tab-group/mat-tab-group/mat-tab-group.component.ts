@@ -15,7 +15,7 @@ export class MatTabGroupComponent  implements OnInit{
    borderStyle: string = ' border: 4px solid orange'; 
 
    //array de lista de texto 
-   listaDeTexto =['Michelle', 'Nicole'];
+   listaDeTexto: string[]=['Michelle', 'Nicole'];
   
   
    ngOnInit(): void {
@@ -53,8 +53,7 @@ export class MatTabGroupComponent  implements OnInit{
  eventoBorde(style: string): void{  
  this.borderStyle = style;
  console.log('salida', this.borderStyle)
-
-   } 
+ } 
 
 //metodo  para llamar a la lista con el evento
    nuevaLista(lis:string){

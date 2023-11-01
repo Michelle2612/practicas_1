@@ -1,9 +1,21 @@
 
-<div class="container">
-    <input #t type="text" class="form-control"/>
+<div class="container-sm">
+    <h1>Lista de nombres</h1>
+    <ul class="g-col-3 g-start-2" >
+    <!-- enumera la lista -->
+    <ol >
+        <!-- recorre la lista del array de texto -->
+       <li *ngFor="let lista of  mensaje ">
+          <!-- se pasa la lista -->
+       {{lista}}
+       </li>
+     </ol>
+    </ul>
+    <!-- [(ngModel)] permite que la variable "nombre" sincronize con el componente mat-tab-group -->
+    <input class="col-3 p-3 mb-2"  [(ngModel)]="nombre"  type="text" class="form-control"/>
 <button 
-(click)="enviarLista(t.value)"
-type="button" class="btn btn-success">
-Listar
+(click)="enviarLista()"
+type="button" class="btn btn-success add-button ">
+Listar nombres
 </button>
 </div>

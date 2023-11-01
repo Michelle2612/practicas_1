@@ -9,13 +9,21 @@ import { Datos } from 'src/app/datos/datosinfo.component';
 export class BuildComponent {
    
 
-  @Input('m') mensaje: string[] = [];
+  
+  @Input() mensaje?: string[];
   @Output() enviarlistado= new EventEmitter<string>();
 
+  //variable que emitira el valor 
+  nombre: string = '';
+
   //metodo la emitir el evento 
-  enviarLista(l: string){
-  this.enviarlistado.emit(l)
-  console.log('evento emetido', this.enviarlistado)
+  enviarLista(){
+  
+  if (this.nombre) { 
+    this.enviarlistado.emit(this.nombre);
+    this.nombre = '';
+    console.log('evento emetido', this.enviarlistado)
+  }
 }
 
 }
