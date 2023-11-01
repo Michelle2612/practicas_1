@@ -11,16 +11,7 @@ const routes: Routes = [
     path: '',
     component: PrincipalComponent,
   },
-  {
-    path: 'mat-tab-group',
-    component: MatTabGroupComponent,
-    children: [
-      {
-        path: 'io',
-        component: IoComponent,
-      },
-    ],
-  },
+
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges, Output} from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter} from '@angular/core';
 import { Datos } from 'src/app/datos/datosinfo.component';
 import { Router } from '@angular/router';
 
@@ -10,9 +10,6 @@ import { Router } from '@angular/router';
 export class IoComponent  implements OnInit{
   
  @Input('dato') datoI?:Datos;
- constructor(private router: Router) {
-
-}
 
   ngOnInit(): void {
     console.log(this.datoI)
@@ -22,4 +19,5 @@ export class IoComponent  implements OnInit{
     console.log('changes:', changes)
     console.log('datos:', this.datoI)
   }
+
 }
