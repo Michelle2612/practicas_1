@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,  OnInit  } from '@angular/core';
 import { Datos, Lista} from './datos/datosinfo.component';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+
+import { HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,18 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 
 })
-export class AppComponent {
+export class AppComponent  implements OnInit {
+
   title = 'iglesiaprueba2';
-  
-  
+  data: any;
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get('http://localhost:3000/api/data').subscribe((response) => {
+      this.data = response;
+    });
+  }
  
 }
 

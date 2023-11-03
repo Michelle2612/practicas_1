@@ -23,7 +23,9 @@
   (enviarlistado)="nuevaLista($event)"
   ></app-build>
   </mat-tab>
-  <mat-tab label="Tools"> Tools </mat-tab>
+  <mat-tab label="Tools"> 
+    <app-tools [datosPersonales]="datosPersonales" (dataEmitter)="datosPe($event)"> </app-tools>
+  </mat-tab>
   <mat-tab label="Manage"> Manage </mat-tab>
   <mat-tab label="Communicate"> Communicate </mat-tab>
   <mat-tab label="Training"> Training </mat-tab>

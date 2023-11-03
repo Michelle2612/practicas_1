@@ -16,6 +16,8 @@ export class MatTabGroupComponent  implements OnInit{
 
    //array de lista de texto 
    listaDeTexto: string[]=['Michelle', 'Nicole'];
+   datosPersonales: any = {nombre: '', apellido:'', edad:''};
+   datosP: any;
   
   
    ngOnInit(): void {
@@ -59,6 +61,11 @@ export class MatTabGroupComponent  implements OnInit{
    nuevaLista(lis:string){
     this.listaDeTexto.push(lis)
     console.log('nuevo elemento', this.listaDeTexto)
+   }
+
+   datosPe(datosPersonales: any){
+this.datosP =datosPersonales;
+console.log('se envio', this.datosP)
    }
 }
 

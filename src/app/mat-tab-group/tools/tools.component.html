@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <section class="columna">
+      <!-- Contenido de la primera columna -->
+     <p>Formulario ingresar datos</p>
+    <div class="datos">
+      <p>Nombre:</p>
+      <input [(ngModel)]="datosPersonales.Nombre">
+    
+      <p>Apellido:</p>
+      <input [(ngModel)]="datosPersonales.Apellido">
+      <p>Edad:</p>
+      <input [(ngModel)]="datosPersonales.Edad">
+    </div>
+      <div class="datosBoton">
+      <button class="btn" (click)="metodoDatosPersonales()">Enviar</button>
+      </div>
+   
+  </section>
+
+  <section class="columna">
+      <!-- Contenido de la segunda columna -->
+     <p>formulario recibe datos </p>
+     <body  >
+       <textarea  [(ngModel)]="datosP" class="text.value" name="texto" rows="20" cols="30"></textarea>
+    </body>
+    
+  </section>
+</div>
+
+

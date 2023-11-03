@@ -10,7 +10,9 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { IoComponent } from './mat-tab-group/io/io.component';
 import { CardsComponent } from './mat-tab-group/cards/cards.component';
-import { BuildComponent } from './mat-tab-group/build/build.component'; 
+import { BuildComponent } from './mat-tab-group/build/build.component';
+import { ToolsComponent } from './mat-tab-group/tools/tools.component'; 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { BuildComponent } from './mat-tab-group/build/build.component';
     IoComponent,
     CardsComponent,
     BuildComponent,
+    ToolsComponent,
    
  
 
@@ -33,6 +36,7 @@ import { BuildComponent } from './mat-tab-group/build/build.component';
     ReactiveFormsModule,
     FormsModule,
     NgMultiSelectDropDownModule.forRoot(), 
+    HttpClientModule,
 
   
 
